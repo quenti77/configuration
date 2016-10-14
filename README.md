@@ -1,2 +1,0 @@
-# configuration
-Ma configuration personnel
