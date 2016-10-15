@@ -16,17 +16,21 @@ message() {
 }
 
 info() {
-    message $INFO $1 $2
+    message "${INFO}" "${1}" "${2}"
 }
 
 success() {
-    message $SUCCESS $1 $2
+    message "${SUCCESS}" "${1}" "${2}"
 }
 
 warning() {
-    message $WARNING $1 $2
+    message "${WARNING}" "${1}" "${2}"
 }
 
 danger() {
-    message $DANGER $1 $2
+    message "${DANGER}" "${1}" "${2}"
+}
+
+installInfo() {
+    info "Installation du package ${BLUE}${1} ${INFO}..." "${2}"
 }
