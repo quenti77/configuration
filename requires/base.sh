@@ -32,3 +32,8 @@ sudo npm i -g yarn
 
 # Installation de vscode
 sudo pacman -S community/code
+
+# Installation de la configuration de vim
+wget https://cdn.discordapp.com/attachments/277867751404601345/485816560771137548/vim.tar.gz
+tar -zxvf ./vim.tar.gz -C ~/
+sudo tar -zxvf ./vim.tar.gz -C /root/
