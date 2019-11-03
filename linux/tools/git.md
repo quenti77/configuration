@@ -1,3 +1,9 @@
+## Git
+
+```bash
+sudo apt install git
+```
+
 ### Configuration de git
 
 Dans le fichier ~/.gitconfig (le créer si besoin)

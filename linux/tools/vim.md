@@ -1,7 +1,7 @@
 ### Configuration de vim
 
 ```bash
-sudo apt-get install vim
+sudo apt install vim
 ```
 
 Création d'un fichier de configuration .vimrc dans le dossier des utilisateurs :

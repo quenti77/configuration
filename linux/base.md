@@ -2,18 +2,18 @@
 
 ### Installation des package de base
 - fonts
-- git
+- [git](tools/git.md)
 - [vim](tools/vim.md)
 - curl
 - htop
-- fish
+- [fish](tools/fish.md)
 
 ### Fonts
 
 Go to [Cascadia Code Release](https://github.com/microsoft/cascadia-code/releases)
 
-### Git
+### Curl & htop
 
 ```bash
-sudo apt-get install git
+sudo apt install curl htop
 ```
