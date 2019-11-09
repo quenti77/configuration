@@ -6,14 +6,20 @@
 - [vim](tools/vim.md)
 - curl
 - htop
+- gparted
 - [fish](tools/fish.md)
+
+### Installation d'outils
+
+- [postgresql](soft/postgresql.md)
+- [php](soft/php.md)
 
 ### Fonts
 
 Go to [Cascadia Code Release](https://github.com/microsoft/cascadia-code/releases)
 
-### Curl & htop
+### Curl & htop & gparted
 
 ```bash
-sudo apt install curl htop
+sudo apt install curl htop gparted
 ```
