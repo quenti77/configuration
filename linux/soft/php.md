@@ -73,6 +73,37 @@ xdebug.remote_port=9000
 xdebug.remote_handler=dbgp
 ```
 
+### Modifier le user php
+
+> Il faut le faire pour chaque user qui peut créer un site
+
+```bash
+cd /etc/php/7.4/fpm/pool.d/
+sudo mv www.conf www.conf.save # si pas encore fait
+sudo cp www.conf.save [user].conf
+
+# dans le fichier [user].conf
+# Remplacer le [www] par [<name>] ou <name> nom que vous voulez donner
+[quentin]
+
+# Remplacer le user et le group par celui qui va créer le projet
+user = quentin
+group = quentin
+
+# Remplacer le listen si besoin par
+listen = 127.0.0.1:9000
+
+# Version socket (laisser par défaut pour nginx)
+listen.owner = www-data
+listen.group = www-data
+
+# Version TCP
+listen.allowed_clients = 127.0.0.1
+
+# Ne pas oublier de relancer le service
+sudo systemctl restart php7.4-fpm.service
+```
+
 ### Autre package à installer
 
 composer :
