@@ -28,8 +28,8 @@ gzip_types text/plain text/css text/xml text/javascript application/x-javascript
 gzip_disable "MSIE [1-6]\.";
 
 # Changer les logs pour syslog
-error_log syslog:server=127.0.0.1,tag=nginx_main_error warn;
-access_log syslog:server=127.0.0.1,tag=nginx_main_access main;
+error_log syslog:server=127.0.0.1,facility=local7,tag=nginx_error warn;
+access_log syslog:server=127.0.0.1,facility=local7,tag=nginx_access main;
 ```
 
 Pour créer un vhost
@@ -101,8 +101,8 @@ server {
     server_name choptaphoto.local;
     root /home/quentin/Projects/choptaphoto/public;
 
-    error_log syslog:server=127.0.0.1,tag=http_choptaphoto_error warn;
-    access_log syslog:server=127.0.0.1,tag=http_choptaphoto_access main;
+    error_log syslog:server=127.0.0.1,facility=local7,tag=http_choptaphoto_error warn;
+    access_log syslog:server=127.0.0.1,facility=local7,tag=http_choptaphoto_access main;
 
     return 302 https://$server_name$request_uri;
 }
@@ -114,8 +114,8 @@ server {
     server_name choptaphoto.local;
     root /home/quentin/Projects/choptaphoto/public;
 
-    error_log syslog:server=127.0.0.1,tag=https_choptaphoto_error warn;
-    access_log syslog:server=127.0.0.1,tag=https_choptaphoto_access main;
+    error_log syslog:server=127.0.0.1,facility=local7,tag=https_choptaphoto_error warn;
+    access_log syslog:server=127.0.0.1,facility=local7,tag=https_choptaphoto_access main;
 
     # ssl
     ssl_certificate /etc/nginx/snippets/choptaphoto.pem;
