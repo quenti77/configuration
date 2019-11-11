@@ -50,13 +50,15 @@ sudo apt install python3-dev python3-venv wget python3-setuptools python3-pip
 mkdir -p ~/Documents
 cd ~/Documents
 
+wget https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v4.14/pip/pgadmin4-4.14-py2.py3-none-any.whl
+
 # Création d'un environement
 bash # si différent de bash pour le shell
 python3.7 -m venv pgadmin4 && source pgadmin4/bin/activate
 
 # création d'un service
-pip3.7 install wheel
-pip3.7 install pgadmin4-4.14-py2.py3-none-any.whl
+pip3 install wheel
+pip3 install pgadmin4-4.14-py2.py3-none-any.whl
 
 cd pgadmin4/lib64/python3.7/site-packages/pgadmin4/
 vim config_local.py # voir contenu ci-dessous
@@ -65,7 +67,7 @@ cd ~/Documents
 python3.7 pgadmin4/lib64/python3.7/site-packages/pgadmin4/setup.py
 
 # test de lancement
-python3.7 pgadmin4/lib64/python3.7/site-packages/pgadmin4/setup.py
+python3.7 pgadmin4/lib64/python3.7/site-packages/pgadmin4/pgAdmin4.py
 ```
 
 ```ini
@@ -82,6 +84,7 @@ Création du service :
 # Plus besoin d'être sur bash ici
 sudo vim /etc/systemd/system/pgadmin4.service
 
+sudo systemctl daemon-reload
 sudo systemctl enable pgadmin4.service
 sudo systemctl start pgadmin4.service
 sudo systemctl status pgadmin4.service
