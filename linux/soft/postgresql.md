@@ -103,3 +103,24 @@ PrivateTmp=true
 [Install]
 WantedBy=multi-user.target
 ```
+
+### Nginx proxy (pour simplifier)
+
+```
+# Dans le fichier /etc/hosts
+# 127.0.0.1 pgadmin
+
+sudo vim /etc/nginx/conf.d/pgadmin.conf
+sudo systemctl restart nginx.service
+```
+
+```nginx
+server {
+    listen 80;
+    server_name pgadmin;
+
+    location / {
+        proxy_pass http://127.0.0.1:5050;
+    }
+}
+```
