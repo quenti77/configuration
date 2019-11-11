@@ -53,3 +53,66 @@ sudo apt upgrade
 
 sudo apt install pgadmin4
 ```
+
+Lien de téléchargement pour python : [python version](https://www.pgadmin.org/download/pgadmin-4-python-wheel/)
+
+```bash
+sudo apt install python3-dev python3-venv wget python3-setuptools python3-pip
+
+# Créer un dossier pour le download
+mkdir -p ~/Documents
+cd ~/Documents
+
+# Création d'un environement
+bash # si différent de bash pour le shell
+python3.7 -m venv pgadmin4 && source pgadmin4/bin/activate
+
+# création d'un service
+pip3.7 install wheel
+pip3.7 install pgadmin4-4.14-py2.py3-none-any.whl
+
+cd pgadmin4/lib64/python3.7/site-packages/pgadmin4/
+vim config_local.py # voir contenu ci-dessous
+
+cd ~/Documents
+python3.7 pgadmin4/lib64/python3.7/site-packages/pgadmin4/setup.py
+
+# test de lancement
+python3.7 pgadmin4/lib64/python3.7/site-packages/pgadmin4/setup.py
+```
+
+```ini
+SERVER_MODE = False
+LOG_FILE = '/home/quentin/.pgadmin/pgadmin4.log'
+SQLITE_PATH = '/home/quentin/.pgadmin/pgadmin4.db'
+SESSION_DB_PATH = '/home/quentin/.pgadmin/sessions'
+STORAGE_DIR = '/home/quentin/.pgadmin/storage'
+```
+
+Création du service :
+
+```bash
+# Plus besoin d'être sur bash ici
+sudo vim /etc/systemd/system/pgadmin4.service
+
+sudo systemctl enable pgadmin4.service
+sudo systemctl start pgadmin4.service
+sudo systemctl status pgadmin4.service
+```
+
+```ini
+[Unit]
+Description=Pgadmin4 Service
+After=network.target
+
+[Service]
+User=quentin
+Group=quentin
+WorkingDirectory=/home/quentin/Documents/pgadmin4/
+Environment="PATH=/home/quentin/Documents/pgadmin4/bin"
+ExecStart=/home/quentin/Documents/pgadmin4/bin/python /home/quentin/Documents/pgadmin4/lib64/python3.7/site-packages/pgadmin4/pgAdmin4.py
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+```
