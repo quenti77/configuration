@@ -39,20 +39,7 @@ host    all             all             127.0.0.1/32        md5
 SET ROLE <username>     -- => Change l'utilisateur actif
 ```
 
-### PGADMIN ([https://wiki.postgresql.org/wiki/Apt](https://wiki.postgresql.org/wiki/Apt))
-
-```bash
-sudo apt install ca-certificates gnupg
-curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-
-# Dans le fichier /etc/apt/sources.list.d/pgadmin.list
-deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main
-
-sudo apt update
-sudo apt upgrade
-
-sudo apt install pgadmin4
-```
+### PgAdmin4
 
 Lien de téléchargement pour python : [python version](https://www.pgadmin.org/download/pgadmin-4-python-wheel/)
 
