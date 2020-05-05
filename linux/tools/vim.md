@@ -75,6 +75,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Souris actif
+set mouse=a
+
 " Active plugins
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 nmap <S-s> :NERDTreeToggle<CR>
