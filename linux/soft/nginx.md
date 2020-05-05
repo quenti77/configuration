@@ -43,7 +43,7 @@ sudo mv default.conf default.conf.save
 
 sudo mkdir -p /etc/nginx/snippets
 cd /etc/nginx/snippets
-sudo vim ssl-global-params.conf
+sudo vim ssl-params.conf
 # voir le contenu du fichier
 
 sudo apt install libnss3-tools
@@ -56,7 +56,7 @@ mkcert -install
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
 ```
 
-Fichier ssl-global-params.conf :
+Fichier ssl-params.conf :
 ```nginx
 ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 ssl_prefer_server_ciphers on;
