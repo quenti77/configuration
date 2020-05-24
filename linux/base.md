@@ -20,6 +20,7 @@
 - [php](soft/php.md)
 - [postgresql](soft/postgresql.md)
 - [syslog](soft/syslog.md)
+- [i3](i3/base.md)
 
 ### Fonts
 
