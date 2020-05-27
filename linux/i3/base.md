@@ -104,6 +104,8 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+for_window [class="^.*"] border pixel 0
 ```
 
 Pour changer le menu des applications par défaut c'est ici : 
