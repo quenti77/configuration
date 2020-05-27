@@ -43,6 +43,7 @@ bindsym $mod+Shift+Left focus left
 bindsym $mod+Shift+Down focus down
 bindsym $mod+Shift+Up focus up
 bindsym $mod+Shift+Right focus right
+bindsym $mod+q focus parent
 
 # Orientation
 bindsym $mod+h split h
