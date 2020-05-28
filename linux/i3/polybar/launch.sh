@@ -9,5 +9,9 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar
-polybar -c ~/.config/polybar/config.ini top &
-polybar -c ~/.config/polybar/config.ini bottom &
+MONITORS=$(xrandr -q | grep " connected" | cut -d ' ' -f1)
+for mon in $MONITORS; do
+    echo "Bars on ${mon}"
+    MONITOR=$mon polybar -c ~/.config/polybar/config.ini top &
+    MONITOR=$mon polybar -c ~/.config/polybar/config.ini bottom &
+done
