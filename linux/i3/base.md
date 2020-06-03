@@ -45,6 +45,9 @@ bindsym $mod+Shift+Up focus up
 bindsym $mod+Shift+Right focus right
 bindsym $mod+q focus parent
 
+# Déplace une fenêtre flotante avec "WIN + LeftClick"
+floating_modifier $mod
+
 # Orientation
 bindsym $mod+h split h
 bindsym $mod+v split v
