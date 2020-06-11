@@ -7,8 +7,9 @@ sudo apt install rofi
 
 Il faut créer les fichiers de configurations :
 ```bash
-touch ~/.config/rofi/config
+mkdir -p ~/.config/rofi
 touch ~/.config/rofi/config.rasi
+touch ~/.config/rofi/personal.rasi
 ```
 
 Pour lancer rofi à la place de dmenu il faut remplacer :
@@ -26,12 +27,11 @@ La config de rofi :
 ```scss
 configuration {
 	modi: "window,run,ssh,drun";
-	width: 50;
-	lines: 20;
-	font: "Cascadia Code 12";
+	font: "Cascadia Code 14";
 	show-icons: true;
 	sidebar-mode: true;
 	fake-transparency: true;
+	hide-scrollbar: true;
 }
 @import "~/.config/rofi/personal.rasi"
 ```
@@ -42,7 +42,7 @@ configuration {
  * User: quentin
  */
 
-* {
+ * {
     selected-normal-foreground:  rgba ( 2, 20, 63, 100 % );
     foreground:                  rgba ( 86, 200, 206, 100 % );
     normal-foreground:           @foreground;
@@ -56,7 +56,7 @@ configuration {
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 2, 20, 63, 100 % );
     alternate-active-background: rgba ( 0, 0, 0, 0 % );
-    background:                  rgba ( 29, 29, 38, 75 % );
+    background:                  rgba ( 29, 29, 38, 85 % );
     bordercolor:                 rgba ( 219, 223, 188, 100 % );
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 208, 0 % );
@@ -77,6 +77,11 @@ configuration {
     background-color: @background;
     border:           1;
     padding:          0;
+    location:         west;
+    anchor:           west;
+    height:           100%;
+    width:            35%;
+    orientation:      horizontal;
 }
 #mainbox {
     border:  0;
@@ -95,13 +100,12 @@ configuration {
     border:       2px 0px 0px ;
     border-color: @separatorcolor;
     spacing:      2px ;
-    scrollbar:    true;
     padding:      0px 0px 0px ;
 }
 #element {
     border:  0;
-    padding: 4px 0px 4px 0px;
-    margin: 0px 0px 0px 8px;
+    padding: 8px 12px 8px 12px;
+    margin: 0px;
 }
 #element.normal.normal {
     background-color: @normal-background;

@@ -96,10 +96,10 @@ bindsym $mod+Shift+agrave move container to workspace number $ws10
 # Permet de resize des fenêtres
 mode "resize" {
         # Resize
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # Permet de quitter le mode resize
         bindsym Return mode "default"
