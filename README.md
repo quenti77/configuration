@@ -28,6 +28,7 @@ Voici la liste des outils utilisé, dans quel système et la date de mise à jou
 | -------------- | ------------------ | ------------------- |
 | Hyper-V        | (pour le perso)    | 10 février 2026     |
 | VMWare         | (pour le taff)     | 10 février 2026     |
+| KDE / KWin     | CachyOS            | 22 février 2026     |
 
 
 ## Les outils simples du terminal
