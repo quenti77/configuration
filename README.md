@@ -9,6 +9,7 @@ une spécificité lié à un OS, il sera indiqué directement dans l'outil.
   - [Les systèmes installés](#les-systèmes-installés)
   - [Les outils de base utilisés](#les-outils-de-base-utilisés)
   - [Les outils simples du terminal](#les-outils-simples-du-terminal)
+  - [Audio](#audio)
 
 
 ## Les systèmes installés
@@ -17,18 +18,21 @@ Voici la liste des systèmes que j'ai installé et de quand date la dernière mi
 
 | Nom de l'OS                    | Date d'installation | Date de mise à jour |
 | ------------------------------ | ------------------- | ------------------- |
-| [CachyOS](https://cachyos.org) | 10 Février 2026     | 10 Février 2026     |
+| [CachyOS](https://cachyos.org) | 10 Février 2026     | 23 juin 2026        |
 
 
 ## Les outils de base utilisés
 
 Voici la liste des outils utilisé, dans quel système et la date de mise à jour :
 
-| Nom de l'outil | Quel(s) système(s) | Date de mise à jour |
-| -------------- | ------------------ | ------------------- |
-| Hyper-V        | (pour le perso)    | 10 février 2026     |
-| VMWare         | (pour le taff)     | 10 février 2026     |
-| KDE / KWin     | CachyOS            | 22 février 2026     |
+| Nom de l'outil                         | Quel(s) système(s) | Date de mise à jour |
+| -------------------------------------- | ------------------ | ------------------- |
+| Hyper-V                                | (pour le perso)    | 10 février 2026     |
+| VMWare                                 | (pour le taff)     | 10 février 2026     |
+| [KDE / KWin](KDE/kwin.md)              | CachyOS            | 22 février 2026     |
+| [KDE](KDE/kde.md)                      | CachyOS            | 23 juin 2026        |
+| [Docker](Hypervisor/Docker/notes.md)   | CachyOS            | 23 février 2026     |
+| [VSCode](VSCode/README.md)             | CachyOS            | 23 avril 2026       |
 
 
 ## Les outils simples du terminal
@@ -44,4 +48,11 @@ Voici la liste des outils utilisé, dans quel système et la date de mise à jou
 | fd             | CachyOS            | 10 février 2026     |
 | fzf            | CachyOS            | 10 février 2026     |
 | ripgrep        | CachyOS            | 10 février 2026     |
+
+
+## Audio
+
+| Nom                                                    | Système | Date de mise à jour |
+| ------------------------------------------------------ | ------- | ------------------- |
+| [Roland TD-07 via PipeWire](Audio/td07-audio-setup.md) | CachyOS | 22 mars 2026        |
 
