@@ -9,6 +9,7 @@ une spécificité lié à un OS, il sera indiqué directement dans l'outil.
   - [Les systèmes installés](#les-systèmes-installés)
   - [Les outils de base utilisés](#les-outils-de-base-utilisés)
   - [Les outils simples du terminal](#les-outils-simples-du-terminal)
+  - [Système](#système)
   - [Audio](#audio)
 
 
@@ -49,6 +50,13 @@ Voici la liste des outils utilisé, dans quel système et la date de mise à jou
 | fd             | CachyOS            | 10 février 2026     |
 | fzf            | CachyOS            | 10 février 2026     |
 | ripgrep        | CachyOS            | 10 février 2026     |
+
+
+## Système
+
+| Nom                                          | Système | Date de mise à jour |
+| -------------------------------------------- | ------- | ------------------- |
+| [Mémoire & Swap](System/memory.md)           | CachyOS | 23 juin 2026        |
 
 
 ## Audio
