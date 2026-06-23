@@ -88,6 +88,7 @@ sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other
 
 **Montage automatique au démarrage** via `/etc/fstab` :
 
-```
-.host:/   /mnt/hgfs   fuse.vmhgfs-fuse   allow_other,defaults   0   0
+```bash
+echo '.host:/   /mnt/hgfs   fuse.vmhgfs-fuse   allow_other,defaults   0   0' | sudo tee -a /etc/fstab
+sudo mount -a
 ```

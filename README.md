@@ -33,6 +33,7 @@ Voici la liste des outils utilisé, dans quel système et la date de mise à jou
 | [KDE](KDE/kde.md)                      | CachyOS            | 23 juin 2026        |
 | [Docker](Hypervisor/Docker/notes.md)   | CachyOS            | 23 février 2026     |
 | [VSCode](VSCode/README.md)             | CachyOS            | 23 avril 2026       |
+| [PhpStorm](PhpStorm/README.md)         | CachyOS            | 23 juin 2026        |
 
 
 ## Les outils simples du terminal
